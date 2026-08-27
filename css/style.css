@@ -219,3 +219,48 @@ mv
 /*---------------
 ご挨拶
 ---------------*/
+.goaisatsu {
+    padding: 6rem 3rem ;
+    position: relative;
+}
+
+.goaisatsu__contents {
+    margin-top: 1.5rem;
+}
+
+.goaisatsu__title h2 {
+    font-size: 3rem;
+    line-height: calc(50 / 30);
+    font-weight: 700;
+    color: var(--color-main);
+    text-align: center;
+}
+
+.goaisatsu__contents p {
+    font-size: 1.8rem;
+    line-height: calc(33 / 18);
+    text-align: center;
+}
+
+.goaisatsu__contents p span {
+    display: inline-block;
+    white-space: nowrap;
+    z-index: 500;
+}
+
+.asiato__image {
+    position: absolute;
+    right: calc(
+        max(3rem, calc((100% - 88rem) / 2))
+        - 2.376rem
+    );
+    bottom: calc(6rem - 2.612rem);
+    width: 8.375rem;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.asiato__image img {
+    width: 100%;
+    height: auto;
+}
