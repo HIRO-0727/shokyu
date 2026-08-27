@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+:root {
+    --color-main: #0D96A0;
+    --color-text: #505050;
+}
+
+/*---------------
+    base
+---------------*/
+html {
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-text-size-adjust: 100%;
+    word-break: break-all;
+    font-size: 10px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
+}
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    color: var(--color-text);
+    font-size: 1.7rem;
+    font-style: normal;
+    line-height: calc(30 / 17);
+    letter-spacing: 0;
+}
+
+#container {
+    width: 100%;
+    overflow: hidden;
+}
+
+/*---------------
+common
+---------------*/
+/* PC, SPの非表示 */
+@media (max-width: 767px) {
+.pc {
+   display: none !important;
+  }
+}
+@media (min-width: 768px) {
+.sp {
+   display: none !important;
+  }
+}
+
+.main {
+    margin-top: 50px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.inner {
+    max-width: 880px;
+    margin-inline: auto;
+}
+
+/*---------------
+header
+---------------*/
+.header {
+    width: 100%;
+    height: 5rem;
+    background: #fff;
+    padding-inline: 3rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    height: inherit; 
+}
+
+.header__link {
+    height: inherit;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: calc(33 / 18);
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    column-gap: 0.951rem;
+}
+
+.logo__image {
+    width: auto;
+    height: 50.98%;
+    flex-shrink: 0;
+    /* transform: translateY(-2px); */
+}
+
+.header__logo a {
+    height: 5rem;
+    display: flex;
+    /* padding-top: 8px; */
+    /* padding-bottom: 9px; */
+    align-items: center;
+    line-height: calc(33 / 18);
+    font-size: 1.8rem;
+    font-weight: 700;
+    transition: opacity 0.4s;
+}
+
+@media (min-width: 768px) {
+    .header__logo a:hover {
+        opacity: 0.7;
+    }
+}
+
+@media (max-width: 767px) {
+    .header__logo a {
+        font-size: 2rem;
+    }
+}
+
+.header__nav ul {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.header__nav ul li a {
+    height: 5rem;
+    display: flex;
+    /* padding-top: 8px; */
+    /* padding-bottom: 8px; */
+    align-items: center;
+    line-height: calc(14 / 14);
+    font-size: 1.4rem;
+    font-weight: 700;
+    transition: opacity 0.4s;
+}
+
+@media (min-width: 768px) {
+    .header__nav ul li a:hover {
+        opacity: 0.7;
+    }
+}
+
+/*---------------
+mv
+---------------*/
+.mv {
+    position: relative;
+}
+
+.mv__image {
+    aspect-ratio: 1080 /500;
+    object-fit: cover;
+}
+@media (max-width: 767px) {
+    .mv__image {
+        aspect-ratio: 375 /550;
+        object-fit: cover;
+    }
+}
+
+.mv__contents {
+    width: 45.56%;
+    height: min(42%, 21rem);
+    position: absolute;
+    background: rgba(255, 255, 255, 0.72);
+    top: 30.4%;
+    left: 0;
+    /* margin-top: 15.2rem; */
+}
+
+@media (min-width: 768px) {
+    .mv__contents {
+        padding-left:
+            max(30px, calc((100% - 880px) / 2));
+    }
+}
+
+.mv__catch p {
+    font-size: min(
+        calc(25 / 1080 * 100vw),
+        2.5rem
+    );
+    font-weight: 700;
+    line-height: calc(36 / 25);
+    padding-top: min(
+        calc(23 / 1080 * 100vw),
+        2.3rem
+    );
+}
+
+.mv__catch h2 {
+    font-size: min(
+        calc(40 / 1080 * 100vw),
+        4rem
+    );
+    font-weight: 700;
+    line-height: calc(60 / 40);
+    color: var(--color-main);
+    margin-top: min(
+        calc(8 / 1080 * 100vw),
+        0.8rem
+    );
+}
+
+/*---------------
+ご挨拶
+---------------*/
