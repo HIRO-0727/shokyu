@@ -64,6 +64,45 @@ img {
     margin-inline: auto;
 }
 
+.logo__image {
+    width: auto;
+    height: 50%;
+    flex-shrink: 0;
+    /* transform: translateY(-2px); */
+}
+
+.section-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: calc(36 / 25);
+}
+
+.section-title::before,
+.section-title::after {
+    content: "";
+    width: 2.55rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    background-image: url(../img/asiato-logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.section-title h2::before {
+    left: -2rem;
+}
+.section-title h2::after {
+    right: -2rem;
+}
+
 /*---------------
 header
 ---------------*/
@@ -97,13 +136,6 @@ header
     display: flex;
     align-items: center;
     column-gap: 0.951rem;
-}
-
-.logo__image {
-    width: auto;
-    height: 50.98%;
-    flex-shrink: 0;
-    /* transform: translateY(-2px); */
 }
 
 .header__logo a {
@@ -263,4 +295,62 @@ mv
 .asiato__image img {
     width: 100%;
     height: auto;
+}
+
+/*---------------
+強み
+---------------*/
+.tsuyomi {
+    padding: 6.4rem 3rem 6.8rem;
+    background: rgba(13, 150, 160, 0.102);
+}
+
+.tsuyomi__contents {
+    margin-top: 4.8rem;
+    display: grid;
+    row-gap: 5rem;
+}
+
+.tsuyomi__item1 {
+    display: grid;
+    grid-template-columns: 
+        minmax(0, 1fr)
+        calc(440 / 880 * 100%);
+    grid-template-areas: "textarea image";
+    column-gap: calc(45 / 880 * 100%);
+}
+
+.tsuyomi__item2 {
+    display: grid;
+    grid-template-columns: 
+        minmax(0, 1fr)
+        calc(395 / 880 * 100%);
+    grid-template-areas: "image textarea";
+    column-gap: calc(45 / 880 * 100%);
+}
+
+.tsuyomi__textarea {
+    grid-area: textarea;
+    padding-top: calc(48 / 395 * 100%);
+}
+
+.tsuyomi__image {
+    grid-area: image;
+}
+
+.tsuyomi__textarea h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: calc(33 / 22);
+}
+
+.tsuyomi__textarea h3 span {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.tsuyomi__textarea p {
+    margin-top: calc(19 / 395 * 100%);
+    font-size: 1.8rem;
+    line-height: calc(33 / 18);
 }
