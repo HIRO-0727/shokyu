@@ -3,6 +3,7 @@
 :root {
     --color-main: #0D96A0;
     --color-text: #505050;
+    --color-border:#707070;
 }
 
 /*---------------
@@ -379,13 +380,13 @@ mv
 
 .service-item__textarea {
     margin-top: 1.9rem;
-    text-align: center;
 }
 
 .service-item__textarea h3 {
     font-size: 2rem;
     line-height: calc(25 / 20);
     font-weight: 700;
+    text-align: center;
 }
 
 .service-item__textarea p span {
@@ -395,4 +396,58 @@ mv
 
 .service-item__textarea p {
     margin-top: 0.8rem;
+}
+
+/*---------------
+お知らせ
+---------------*/
+.osirase {
+    padding: 6.3rem 3rem 6.8rem;
+    background: rgba(13, 150, 160, 0.102);
+}
+
+.osirase__contents {
+    margin-top: 4.6rem;
+}
+
+.osirase__list li {
+    display: grid;
+    grid-template-columns: 
+        11.1rem
+        18.4rem
+        minmax(0, 1fr);
+    column-gap: 2.5rem;
+    align-items: center;
+    text-align: left;
+    /* padding-block: 1.5rem; */
+}
+
+.osirase__date {
+    padding-left: 1.9rem;
+}
+
+.osirase__list {
+    border-top: 0.1rem solid var(--color-border);
+}
+
+.osirase__list li {
+    border-bottom: 0.1rem solid var(--color-border);
+}
+
+.osirase__date {
+    font-weight: 700;
+    line-height: calc(25 / 17);
+}
+
+.osirase__subject {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: calc(25 / 20);
+    color: var(--color-main);
+}
+
+.osirase_desc {
+    line-height: calc(30 / 17);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
