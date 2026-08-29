@@ -104,6 +104,11 @@ img {
     right: -2rem;
 }
 
+span {
+    display: inline-block;
+    white-space: nowrap;
+}
+
 /*---------------
 header
 ---------------*/
@@ -276,8 +281,8 @@ mv
 }
 
 .goaisatsu__contents p span {
-    display: inline-block;
-    white-space: nowrap;
+    /* display: inline-block; */
+    /* white-space: nowrap; */
     z-index: 500;
 }
 
@@ -323,16 +328,17 @@ mv
 
 .tsuyomi__item2 {
     display: grid;
-    grid-template-columns: 
-        minmax(0, 1fr)
-        calc(395 / 880 * 100%);
+    grid-template-columns:
+        calc(440 / 880 * 100%) 
+        minmax(0, 1fr);
     grid-template-areas: "image textarea";
     column-gap: calc(45 / 880 * 100%);
 }
 
 .tsuyomi__textarea {
     grid-area: textarea;
-    padding-top: calc(48 / 395 * 100%);
+    /* padding-top: calc(48 / 395 * 100%); */
+    align-self: center;
 }
 
 .tsuyomi__image {
@@ -345,10 +351,10 @@ mv
     line-height: calc(33 / 22);
 }
 
-.tsuyomi__textarea h3 span {
+/* .tsuyomi__textarea h3 span {
     display: inline-block;
     white-space: nowrap;
-}
+} */
 
 .tsuyomi__textarea p {
     margin-top: calc(19 / 395 * 100%);
@@ -389,10 +395,10 @@ mv
     text-align: center;
 }
 
-.service-item__textarea p span {
+/* .service-item__textarea p span {
     display: inline-block;
     white-space: nowrap;
-}
+} */
 
 .service-item__textarea p {
     margin-top: 0.8rem;
@@ -450,4 +456,85 @@ mv
     line-height: calc(30 / 17);
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+}
+
+/*---------------
+アクセス
+---------------*/
+.access {
+    padding: 6.3rem 3rem 7rem;
+}
+
+.access__contents {
+    margin-top: 4.6rem;
+    display: grid;
+    grid-template-columns: 
+        calc(440 / 880 * 100%)
+        minmax(0, 1fr);
+    grid-template-areas: "image textarea";
+    column-gap: calc(46 / 880 * 100%);
+}
+
+.access__textarea {
+    grid-area: textarea;
+}
+
+.access__image {
+    grid-area: image;
+}
+
+.access__textarea h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: calc(33 / 22);
+}
+
+.address {
+    margin-top: 1.5rem;
+    font-size: 1.8rem;
+    line-height: calc(27 / 18);
+}
+
+.tel {
+    display: flex;
+    align-items: baseline;
+    margin-top: 1.4rem;
+}
+
+.denwa {
+    font-size: 1.8rem;
+    line-height: calc(27 / 18);
+}
+
+.number {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: calc(40 / 22);
+    color: var(--color-main);
+}
+
+.mail {
+    margin-top: 0.8rem;
+    margin-bottom: 2.7rem;
+    font-size: 1.8rem;
+    line-height: calc(27 / 18);
+}
+
+.mail span {
+    transition: opacity 0.4s;
+}
+
+@media (min-width: 768px) {
+    .mail span:hover {
+        opacity: 0.7;
+    }
+}
+
+.sinryo {
+    font-size: 1.8rem;
+    line-height: calc(40 / 18);
+    padding-top: 1.5rem;
+    padding-bottom: 1.4rem;
+    border-top: 0.1rem solid var(--color-border);
+    border-bottom: 0.1rem solid var(--color-border);
 }
