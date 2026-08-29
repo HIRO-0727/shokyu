@@ -4,6 +4,7 @@
     --color-main: #0D96A0;
     --color-text: #505050;
     --color-border:#707070;
+    --color-background:rgba(13, 150, 160, 0.102);
 }
 
 /*---------------
@@ -308,7 +309,7 @@ mv
 ---------------*/
 .tsuyomi {
     padding: 6.4rem 3rem 6.8rem;
-    background: rgba(13, 150, 160, 0.102);
+    background: var(--color-background);
 }
 
 .tsuyomi__contents {
@@ -409,7 +410,7 @@ mv
 ---------------*/
 .osirase {
     padding: 6.3rem 3rem 6.8rem;
-    background: rgba(13, 150, 160, 0.102);
+    background: var(--color-background);
 }
 
 .osirase__contents {
@@ -537,4 +538,93 @@ mv
     padding-bottom: 1.4rem;
     border-top: 0.1rem solid var(--color-border);
     border-bottom: 0.1rem solid var(--color-border);
+}
+
+/*---------------
+お問い合わせ
+---------------*/
+.contact {
+    padding: 6.2rem 3rem 8rem;
+    background: var(--color-background);
+}
+
+.contact__desc {
+    margin-top: 2.5rem;
+    line-height: calc(30 / 17);
+    text-align: center;
+}
+
+.form {
+    margin-top: 3.9rem;
+}
+
+.form__item {
+    display: flex;
+    column-gap: 2.9rem;
+    /* row-gap: 3rem; */
+}
+
+.form__item:not(:first-of-type) {
+    margin-top: 3rem;
+}
+
+.form__label {
+    font-size: 2rem;
+    line-height: calc(33 / 20);
+    width: 14rem;
+    padding-top: 0.7rem;
+}
+
+.form__input {
+    flex: 1;
+}
+
+.form__textarea {
+    flex: 1;
+    line-height: 0;
+}
+
+input[type="text"],
+input[type="email"] {
+    background-color: #fff;
+    height: 4rem;
+    width: 100%;
+    padding-inline: 15px;
+    font-size: 1.7rem;
+}
+
+textarea {
+    background-color: #fff;
+    height: 30rem;
+    width: 100%;
+    resize: none;
+    padding: 15px;
+    font-size: 1.7rem;
+    line-height: 1.6;
+}
+
+.contact__button {
+    margin-top: 5rem;
+    margin-inline: auto;
+    width: 20rem;
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: 5rem;
+    background-color: var(--color-main);
+    color: #fff;
+    border: 1px solid var(--color-main);
+    border-radius: 1rem;
+    font-size: 2.5rem;
+    line-height: calc(33 / 25);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+    /* padding-top: 1px; */
+}
+
+input[type="submit"]:hover {
+    color: var(--color-main);
+    background-color: #fff;
 }
