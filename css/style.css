@@ -628,3 +628,51 @@ input[type="submit"]:hover {
     color: var(--color-main);
     background-color: #fff;
 }
+
+/*---------------
+フッター
+---------------*/
+.footer {
+    padding: 6.6rem 3rem 7rem;
+    background: var(--color-text);
+    color: #fff;
+    font-size: 2rem;
+    line-height: calc(33 / 20);
+    text-align: center;
+}
+
+.footer__content {
+    max-width: 73.7rem;
+    margin-inline: auto;
+}
+
+.footer-nav {
+    border-bottom: 1px solid #fff;
+}
+
+.footer-nav__lists {
+    display: flex;
+    justify-content: center;
+    column-gap: 1.4rem;
+    padding-bottom: 2.1rem;
+}
+
+.footer__copyright {
+    margin-top: 2.7rem;
+}
+
+.sns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1.2rem;
+    margin-top: 0.8rem;
+}
+
+.sns__link img {
+    width: 2.2rem;
+}
+
+.sns__link--insta img {
+    width: 2rem;
+}
