@@ -98,11 +98,8 @@ img {
     background-size: contain;
 }
 
-.section-title h2::before {
-    left: -2rem;
-}
-.section-title h2::after {
-    right: -2rem;
+.service__title {
+    column-gap: 1.6rem;
 }
 
 span {
@@ -342,8 +339,6 @@ mv
 }
 
 .goaisatsu__contents p span {
-    /* display: inline-block; */
-    /* white-space: nowrap; */
     z-index: 500;
 }
 
@@ -364,6 +359,17 @@ mv
     width: 8.375rem;
     z-index: 100;
     pointer-events: none;
+}
+
+@media (max-width: 767px) {
+    .goaisatsu__contents {
+        position: relative;
+    }
+    .asiato__image {
+        right: 2.955rem;
+        bottom: 4.657rem;
+        width: 6.835rem;
+    }
 }
 
 .asiato__image img {
@@ -448,14 +454,17 @@ mv
 
 .tsuyomi__image {
     grid-area: image;
+}
+
+.tsuyomi__image img {
     aspect-ratio: 440 /247;
     object-fit: cover;
 }
 
 @media (max-width: 767px) {
-    .tsuyomi__image {
+    .tsuyomi__image img {
         aspect-ratio: 335 /200;
-    object-fit: cover;
+        object-fit: cover;
     }
 }
 
@@ -646,17 +655,19 @@ mv
 
 .osirase_desc {
     line-height: calc(30 / 17);
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    padding-left: 0.95rem;
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+    /* padding-left: 0.95rem; */
 }
 
 @media (max-width: 767px) {
     .osirase_desc {
         font-size: 1.6rem;
         line-height: calc(24 / 16);
-        padding-top: 0.6rem;
-        padding-bottom: 2.8rem;
+        padding-top: 0.5rem;
+        padding-bottom: 2.7rem;
+        padding-left: 0.95rem;
+        padding-right: 1.05rem;
     }
 }
 
@@ -746,17 +757,10 @@ mv
 }
 
 .number {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    line-height: calc(40 / 22);
+    line-height: calc(40 / 25);
     color: var(--color-main);
-}
-
-@media (max-width: 767px) {
-    .number {
-        font-size: 2.5rem;
-        line-height: calc(40 / 25);
-    }
 }
 
 .mail {
@@ -790,6 +794,7 @@ mv
     line-height: calc(40 / 18);
     padding-top: 1.5rem;
     padding-bottom: 1.4rem;
+    padding-left: 0.4rem;
     border-top: 0.1rem solid var(--color-border);
     border-bottom: 0.1rem solid var(--color-border);
 }
@@ -800,6 +805,7 @@ mv
         line-height: calc(30 / 16);
         padding-top: 1.2rem;
         padding-bottom: 1.2rem;
+        padding-left: 0;
     }
 }
 
@@ -948,6 +954,7 @@ input[type="submit"] {
     input[type="submit"] {
         font-size: 2rem;
         line-height: calc(26 / 20);
+        height: 4.1rem;
     }
 }
 
