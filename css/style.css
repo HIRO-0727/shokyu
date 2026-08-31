@@ -781,6 +781,7 @@ mv
 
 .mail span {
     transition: opacity 0.4s;
+    cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -802,9 +803,10 @@ mv
 @media (max-width: 767px) {
     .sinryo {
         font-size: 1.6rem;
-        line-height: calc(30 / 16);
-        padding-top: 1.2rem;
-        padding-bottom: 1.2rem;
+        line-height: calc(30
+         / 16);
+        padding-top: 1.1rem;
+        padding-bottom: 1.1rem;
         padding-left: 0;
     }
 }
@@ -958,9 +960,11 @@ input[type="submit"] {
     }
 }
 
-input[type="submit"]:hover {
-    color: var(--color-main);
-    background-color: #fff;
+@media (min-width: 768px) {
+    input[type="submit"]:hover {
+        color: var(--color-main);
+        background-color: #fff;
+    }
 }
 
 /*---------------
