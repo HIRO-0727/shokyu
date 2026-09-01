@@ -52,7 +52,7 @@ common
 }
 
 .main {
-    margin-top: 50px;
+    margin-top: 5rem;
 }
 
 img {
@@ -63,7 +63,7 @@ img {
 
 .inner {
     max-width: 880px;
-    margin-inline: auto;
+    margin: 0 auto;
 }
 
 .logo__image {
@@ -209,7 +209,7 @@ mv
 
 @media (max-width: 767px) {
     .mv__image img {
-        aspect-ratio: 375 / 500;
+        aspect-ratio: 375 / 550;
     }
 }
 
@@ -279,7 +279,6 @@ mv
 ---------------*/
 .goaisatsu {
     padding: 6rem 3rem ;
-    position: relative;
 }
 
 @media (max-width: 767px) {
@@ -290,6 +289,7 @@ mv
 
 .goaisatsu__contents {
     margin-top: 1.5rem;
+    position: relative;
 }
 
 @media (max-width: 767px) {
@@ -328,7 +328,8 @@ mv
 }
 
 .goaisatsu__contents p span {
-    z-index: 500;
+    /* z-index: 500; */
+    position: relative;
 }
 
 @media (max-width: 767px) {
@@ -340,23 +341,18 @@ mv
 
 .asiato__image {
     position: absolute;
-    right: calc(
-        max(3rem, calc((100% - 88rem) / 2))
-        - 2.376rem
-    );
-    bottom: calc(6rem - 2.612rem);
     width: 8.375rem;
-    z-index: 100;
+    bottom: -2.6rem;
+    right: -2.37rem;
+    /* z-index: 100; */
     pointer-events: none;
 }
 
 @media (max-width: 767px) {
-    .goaisatsu__contents {
-        position: relative;
-    }
+
     .asiato__image {
-        right: 2.955rem;
-        bottom: 4.657rem;
+        right: 0.955rem;
+        bottom: 0.757rem;
         width: 6.835rem;
     }
 }
