@@ -92,7 +92,7 @@ img {
     width: 2.55rem;
     height: 2.5rem;
     flex-shrink: 0;
-    background-image: url(../img/asiato-logo.png);
+    background-image: url(../img/asiato-logo.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -203,85 +203,74 @@ mv
     position: relative;
 }
 
-.mv__image {
-    aspect-ratio: 1080 /500;
-    object-fit: cover;
+.mv__image img {
+    aspect-ratio: 1080 / 500;
 }
+
 @media (max-width: 767px) {
-    .mv__image {
-        aspect-ratio: 375 /550;
-        object-fit: cover;
+    .mv__image img {
+        aspect-ratio: 375 / 500;
     }
 }
 
 .mv__contents {
-    width: 45.56%;
-    height: min(42%, 21rem);
+    width: 100%;
+    height: 100%;
     position: absolute;
-    background: rgba(255, 255, 255, 0.72);
-    top: 30.4%;
+    top: 0;
     left: 0;
-    /* margin-top: 15.2rem; */
-}
-
-@media (min-width: 768px) {
-    .mv__contents {
-        padding-left:
-            max(30px, calc((100% - 880px) / 2));
-    }
+    padding-top: calc(152 / 1080 * 100vw);
 }
 
 @media (max-width: 767px) {
     .mv__contents {
-        padding-left: 2rem;
-        width: 31.1rem;
-        height: 14.8rem;
-        top: auto;
-        bottom: 0;
-        left: 0;
+        display: flex;
+        align-items: flex-end;
     }
 }
 
-.mv__catch p {
-    font-size: min(
-        calc(25 / 1080 * 100vw),
-        2.5rem
-    );
-    font-weight: 700;
-    line-height: calc(36 / 25);
-    padding-top: min(
-        calc(23 / 1080 * 100vw),
-        2.3rem
-    );
+.mv__catch {
+    width: calc(492 / 1080 * 100vw);
+    height: calc(210 / 1080 * 100vw);
+    background: rgba(255, 255, 255, 0.702);
+    display: flex;
+    align-items: center;
+    padding-left: calc(99 / 1080 * 100vw);
 }
 
 @media (max-width: 767px) {
-    .mv__catch p {
-        font-size: 2rem;
-        line-height: calc(29 / 20);
-        padding-top: 1.8rem;
+    .mv__catch {
+        width: calc(311 / 375 * 100vw);
+        height: calc(148 / 375 * 100vw);
+        padding-left: calc(20 / 375 *100vw);
     }
 }
 
 .mv__catch h2 {
-    font-size: min(
-        calc(40 / 1080 * 100vw),
-        4rem
-    );
+    font-size: calc(25 / 1080 * 100vw);
     font-weight: 700;
-    line-height: calc(60 / 40);
-    color: var(--color-main);
-    margin-top: min(
-        calc(8 / 1080 * 100vw),
-        0.8rem
-    );
+    line-height: calc(36 / 25);
 }
 
 @media (max-width: 767px) {
     .mv__catch h2 {
-        font-size: 3rem;
+        font-size: calc(20 / 375 * 100vw);
+        font-weight: 700;
+        line-height: calc(29 / 20);
+    }
+}
+
+.mv__catch h2 span {
+    font-size: calc(40 / 1080 *100vw);
+    line-height: calc(60 / 40);
+    color: var(--color-main);
+}
+
+@media (max-width: 767px) {
+    .mv__catch h2 span {
+        font-size: calc(30 / 375 *100vw);
         line-height: calc(40 / 30);
-        margin-top: 0.7rem;
+        color: var(--color-main);
     }
 }
 
