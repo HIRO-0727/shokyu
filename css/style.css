@@ -1094,7 +1094,7 @@ input[type="submit"] {
     .sns {
         width: 12.2rem;
         justify-content: space-between;
-        column-gap: auto;
+        column-gap: 0;
         margin-inline: auto;
         margin-top: 2.8rem;
     }
