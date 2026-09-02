@@ -585,7 +585,7 @@ mv
     margin-top: 4.6rem;
 }
 
-.osirase__list li {
+.osirase__link {
     display: grid;
     grid-template-columns: 
         11.1rem
@@ -598,7 +598,7 @@ mv
 }
 
 @media (max-width: 767px) {
-    .osirase__list li {
+    .osirase__link {
         grid-template-columns: 1fr;
     }
 }
@@ -640,8 +640,8 @@ mv
 
 .osirase_desc {
     line-height: calc(30 / 17);
-    padding-top: 1.4rem;
-    padding-bottom: 1.4rem;
+    padding-top: 1.45rem;
+    padding-bottom: 1.45rem;
     /* padding-left: 0.95rem; */
 }
 
@@ -649,8 +649,8 @@ mv
     .osirase_desc {
         font-size: 1.6rem;
         line-height: calc(24 / 16);
-        padding-top: 0.5rem;
-        padding-bottom: 2.7rem;
+        padding-top: 0.55rem;
+        padding-bottom: 2.75rem;
         padding-left: 0.95rem;
         padding-right: 1.05rem;
     }
