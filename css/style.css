@@ -205,11 +205,13 @@ mv
 
 .mv__image img {
     aspect-ratio: 1080 / 500;
+    object-fit: cover;
 }
 
 @media (max-width: 767px) {
     .mv__image img {
         aspect-ratio: 375 / 550;
+        object-fit: cover;
     }
 }
 
@@ -243,6 +245,16 @@ mv
         width: calc(311 / 375 * 100vw);
         height: calc(148 / 375 * 100vw);
         padding-left: calc(20 / 375 *100vw);
+    }
+}
+
+.mv__catch span {
+    margin-top: 0.8rem;
+}
+
+@media (max-width: 767px) {
+    .mv__catch span {
+        margin-top: 0.7rem;
     }
 }
 
